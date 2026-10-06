@@ -31,9 +31,9 @@ export const nl: Content = {
     shipped: {
       label: "Opgeleverd",
       title: "sol-shell",
-      text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland die ik op mijn eigen computer gebruik. De eerste release is nog in de maak: installatiedocumentatie en een test op een schone machine ontbreken nog.",
-      state: "Release in uitvoering",
-      source: "Broncode",
+      text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland die ik op mijn eigen computer gebruik. Versie 0.1.0 is uitgebracht: te installeren op NixOS via een flake, en een VM-test start een verse gebruiker op en controleert of de shell opstart en blijft draaien.",
+      state: "Uitgebracht, v0.1.0",
+      source: "Release-notities",
     },
     team: {
       label: "Samenwerken",

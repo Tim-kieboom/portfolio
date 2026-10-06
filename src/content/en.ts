@@ -31,9 +31,9 @@ export const en: Content = {
     shipped: {
       label: "Shipped",
       title: "sol-shell",
-      text: "A status bar, wallpaper and notification daemon for Hyprland that I run on my own machine. The first release is still in progress: install docs and a test on a clean machine remain.",
-      state: "Release in progress",
-      source: "Source",
+      text: "A status bar, wallpaper and notification daemon for Hyprland that I run on my own machine. Version 0.1.0 is released: it installs on NixOS from a flake, and a VM test boots a fresh user and checks that the shell starts and stays up.",
+      state: "Released, v0.1.0",
+      source: "Release notes",
     },
     team: {
       label: "Teamwork",

@@ -73,13 +73,13 @@ function topBar(c: Content, all: Content[]): string {
   </div>`;
 }
 
-function verifyItem(item: VerifyItem, options: { wip?: boolean; url?: string } = {}): string {
+function verifyItem(item: VerifyItem, options: { done?: boolean; url?: string } = {}): string {
   return lines(
     `          <li>`,
     `            <p class="label">${item.label}</p>`,
     `            <h3>${item.title}</h3>`,
     `            <p>${item.text}</p>`,
-    `            <p class="state${options.wip ? " wip" : ""}">${item.state}</p>`,
+    `            <p class="state${options.done ? " done" : ""}">${item.state}</p>`,
     options.url && item.source ? `            <a class="go" href="${options.url}">${item.source}</a>` : "",
     `          </li>`,
   );
@@ -103,7 +103,7 @@ function hero(c: Content): string {
       <div class="verify" id="verify" role="region" aria-labelledby="verify-title">
         <h2 id="verify-title" class="label">${verify.title}</h2>
         <ol>
-${verifyItem(verify.shipped, { wip: true, url: "https://github.com/Tim-kieboom/sol-shell" })}
+${verifyItem(verify.shipped, { done: true, url: "https://github.com/Tim-kieboom/sol-shell/releases/tag/v0.1.0" })}
 ${verifyItem(verify.team)}
 ${verifyItem(verify.experience)}
         </ol>

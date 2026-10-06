@@ -94,12 +94,12 @@
       border: 1px solid var(--placeholder);
     }
 
-    &.wip {
-      color: var(--accent);
+    &.done {
+      color: var(--ok);
 
       &::before {
-        background: conic-gradient(var(--accent) 0 50%, transparent 50% 100%);
-        border-color: var(--accent);
+        background: var(--ok);
+        border-color: var(--ok);
       }
     }
   }

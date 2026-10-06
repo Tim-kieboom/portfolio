@@ -40,3 +40,74 @@
     background: var(--ok);
   }
 }
+
+// "Check it for yourself": the three things a reader can verify.
+.verify {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+
+  > .label {
+    margin: 0;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding: 20px 16px;
+
+    + li {
+      border-top: 1px solid var(--line);
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      margin-top: 4px;
+    }
+
+    p:not(.label):not(.state) {
+      margin-top: 8px;
+      color: var(--muted);
+    }
+  }
+
+  .state {
+    @include mono(0.78rem);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 12px;
+    color: var(--muted);
+
+    &::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: 1px solid var(--placeholder);
+    }
+
+    &.wip {
+      color: var(--accent);
+
+      &::before {
+        background: conic-gradient(var(--accent) 0 50%, transparent 50% 100%);
+        border-color: var(--accent);
+      }
+    }
+  }
+
+  .go {
+    @include mono(0.85rem);
+    @include accent-link;
+    display: inline-block;
+    margin: 12px 0 0 16px;
+  }
+}

@@ -111,3 +111,8 @@
   .w::before { @include dot(wip); }
   .p::before { @include dot(plan); }
 }
+
+// The sol-lang panel now sits in the work section, below the feature.
+.panel--lang {
+  margin-top: 64px;
+}

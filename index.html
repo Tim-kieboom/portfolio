@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
 <title>Tim Kieboom</title>
+<meta name="description" content="Tim Kieboom, backend and systems developer. A compiler, a desktop shell, a terminal editor and a small operating system, plus a school team project and a CityGIS internship.">
+<link rel="canonical" href="https://tim-kieboom.github.io/portfolio/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%2311111b%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27monospace%27 font-size=%2716%27 font-weight=%27bold%27 text-anchor=%27middle%27 fill=%27%23d1c88f%27%3Etk%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tim Kieboom">
+<meta property="og:description" content="Backend and systems developer who likes working close to the machine.">
+<meta property="og:url" content="https://tim-kieboom.github.io/portfolio/">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -17,6 +25,7 @@
   <div class="bar">
     <a class="mark" href="#top">tim<b>@</b>kieboom</a>
     <nav aria-label="Sections">
+      <a href="#verify">verify</a>
       <a href="#work">work</a>
       <a href="#about">about</a>
       <a href="#contact">contact</a>
@@ -35,45 +44,38 @@
           <a href="https://github.com/Tim-kieboom">GitHub</a>
         </div>
       </div>
-
-      <div class="panel" aria-label="Example of sol-lang syntax and the state of its compiler pipeline">
-        <header>
-          <span class="label">sol-lang</span>
-          <span class="label">my compiler, in Rust</span>
-        </header>
-<pre><span class="c">// constant, immutable local, mutable local</span>
-<span class="t">answer</span> <span class="k">::</span> 42
-<span class="t">immut</span>  <span class="k">:=</span> 1
-<span class="k">mut</span> <span class="t">x</span>  <span class="k">:=</span> 2
-x = 3
-
-<span class="c">// add a method to a primitive type</span>
-<span class="t">int</span>.add(<span class="k">this</span>, a: <span class="t">int</span>)
-
-<span class="c">// propagate an error to the caller</span>
-value := parse().<span class="k">pass</span></pre>
-        <ol class="pipe" aria-label="Compiler pipeline">
-          <li><span>lexer</span></li>
-          <li><span>AST</span></li>
-          <li><span>typechecker</span></li>
-          <li><span>MIR</span></li>
-          <li><span>LLVM IR</span></li>
-          <li class="wip"><span>borrow checker</span></li>
-          <li class="plan"><span>generics</span></li>
+      <div class="verify" id="verify" role="region" aria-labelledby="verify-title">
+        <h2 id="verify-title" class="label">Check it for yourself</h2>
+        <ol>
+          <li>
+            <p class="label">Shipped</p>
+            <h3>sol-shell</h3>
+            <p>A status bar, wallpaper and notification daemon for Hyprland that I run on my own machine. The first release is still in progress: install docs and a test on a clean machine remain.</p>
+            <p class="state wip">Release in progress</p>
+            <a class="go" href="https://github.com/Tim-kieboom/sol-shell">Source</a>
+          </li>
+          <li>
+            <p class="label">Teamwork</p>
+            <h3>DSI-logboek</h3>
+            <p>A school web app prototype built by a team of three contributors, with student and parent pages. I made 46 commits, including the database work, in a repository with about 30 pull requests merged across the team.</p>
+            <p class="state">Code private, happy to walk through it</p>
+          </li>
+          <li>
+            <p class="label">Work experience</p>
+            <h3>CityGIS internship</h3>
+            <p>An internship at a company that builds geospatial software. I wrote Kotlin, Rust and Python against their systems in a private repository. The code is proprietary, so I describe it rather than link it.</p>
+            <p class="state">Code private, references on request</p>
+          </li>
         </ol>
-        <div class="legend">
-          <span>works end to end (non-generic subset)</span>
-          <span class="w">in progress</span>
-          <span class="p">planned</span>
-        </div>
       </div>
+
     </div>
   </main>
 
   <section id="work">
     <div class="sec-head">
       <h2>Selected work</h2>
-      <span class="label">Four projects, all public</span>
+      <span class="label">Public projects</span>
     </div>
 
     <div class="feature">
@@ -95,6 +97,37 @@ value := parse().<span class="k">pass</span></pre>
       </dl>
     </div>
 
+      <div class="panel panel--lang" aria-label="Example of sol-lang syntax and the state of its compiler pipeline">
+        <header>
+          <span class="label">sol-lang</span>
+          <span class="label">my compiler, in Rust</span>
+        </header>
+  <pre><span class="c">// constant, immutable local, mutable local</span>
+  <span class="t">answer</span> <span class="k">::</span> 42
+  <span class="t">immut</span>  <span class="k">:=</span> 1
+  <span class="k">mut</span> <span class="t">x</span>  <span class="k">:=</span> 2
+  x = 3
+  
+  <span class="c">// add a method to a primitive type</span>
+  <span class="t">int</span>.add(<span class="k">this</span>, a: <span class="t">int</span>)
+  
+  <span class="c">// propagate an error to the caller</span>
+  value := parse().<span class="k">pass</span></pre>
+        <ol class="pipe" aria-label="Compiler pipeline">
+          <li><span>lexer</span></li>
+          <li><span>AST</span></li>
+          <li><span>typechecker</span></li>
+          <li><span>MIR</span></li>
+          <li><span>LLVM IR</span></li>
+          <li class="wip"><span>borrow checker</span></li>
+          <li class="plan"><span>generics</span></li>
+        </ol>
+        <div class="legend">
+          <span>works end to end (non-generic subset)</span>
+          <span class="w">in progress</span>
+          <span class="p">planned</span>
+        </div>
+      </div>
     <div class="rows">
       <article class="row">
         <h3>sol-shell</h3>
@@ -157,7 +190,7 @@ value := parse().<span class="k">pass</span></pre>
     <div class="links">
       <a href="https://github.com/Tim-kieboom">github.com/Tim-kieboom</a>
     </div>
-    <p class="small">Built with plain HTML, SCSS and TypeScript.</p>
+    <p class="small">References on request. Built with plain HTML, SCSS and TypeScript.</p>
   </footer>
 </div>
 </body>

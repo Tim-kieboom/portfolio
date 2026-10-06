@@ -1,0 +1,48 @@
+@use "sass:map";
+
+$breakpoints: (
+  tablet: 860px,
+  phone: 480px,
+);
+
+// Apply styles at or below a named breakpoint.
+@mixin below($name) {
+  @media (max-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+// Small monospace caption used for labels, tags and metadata.
+@mixin mono($size) {
+  font-family: var(--font-mono);
+  font-size: $size;
+}
+
+// Underlined link with an accent rule that shifts color on hover.
+@mixin accent-link {
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+
+  &:hover {
+    color: var(--accent-hover);
+    border-color: var(--accent-hover);
+  }
+}
+
+// Two-column grid that collapses to one column on tablet and below.
+@mixin split($left: 1fr, $right: 1fr, $gap: 56px) {
+  display: grid;
+  grid-template-columns: minmax(0, $left) minmax(0, $right);
+  gap: $gap;
+
+  @include below(tablet) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+}
+
+// Fluid heading size.
+@mixin fluid-heading($min, $vw, $max) {
+  font-size: clamp($min, $vw, $max);
+  font-weight: 700;
+}

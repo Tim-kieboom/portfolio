@@ -1,0 +1,42 @@
+@use "mixins" as *;
+
+.hero {
+  @include split(1fr, 1.05fr);
+  align-items: start;
+  padding-block: 72px 80px;
+
+  @include below(tablet) {
+    padding-block: 48px 56px;
+  }
+
+  h1 {
+    @include fluid-heading(2.7rem, 7vw, 4.9rem);
+    letter-spacing: -0.02em;
+  }
+
+  .lead {
+    margin-top: 24px;
+    font-size: 1.22rem;
+    line-height: 1.5;
+  }
+
+  .sub {
+    margin-top: 16px;
+    color: var(--muted);
+  }
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 26px;
+
+  i {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ok);
+  }
+}

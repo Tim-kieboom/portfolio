@@ -1,0 +1,41 @@
+// Design tokens. Colors come from the sol-shell palette.
+// They stay CSS custom properties (not Sass variables) so they can be
+// derived with color-mix() and inspected live in the browser.
+
+:root {
+  // surfaces
+  --bg: #11111b;
+  --surface: #1e1e2e;
+  --hover: #313244;
+  --highlight: #282e1e;
+  --line: #45475a;
+
+  // text
+  --ink: #cdd6f4;
+  --ink-soft: #d9d3c9;
+  --mask: #b3bdde;
+  --muted: color-mix(in srgb, var(--ink) 72%, var(--bg));
+  --muted-2: color-mix(in srgb, var(--ink) 56%, var(--bg));
+  --placeholder: #6c7086;
+
+  // accents
+  --accent: #d1c88f;
+  --accent-hover: #d5de8f;
+  --accent-ink: #11111b;
+  --ok: #dee3a1;
+  --danger: #d96981;
+
+  // code panel
+  --code-bg: var(--surface);
+  --code-fg: var(--ink);
+  --code-comment: var(--muted-2);
+  --code-key: var(--accent);
+  --code-type: var(--mask);
+
+  // fonts
+  --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  color-scheme: dark;
+}

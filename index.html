@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Tim Kieboom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dist/main.css">
+<script type="module" src="dist/main.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+  <div class="bar">
+    <a class="mark" href="#top">tim<b>@</b>kieboom</a>
+    <nav aria-label="Sections">
+      <a href="#work">work</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <p class="status label"><i aria-hidden="true"></i> Open to work</p>
+        <h1>Tim Kieboom</h1>
+        <p class="lead">Backend and systems developer who likes working close to the machine.</p>
+        <p class="sub">I write a compiler, a desktop shell, a terminal editor and a small operating system in my spare time, and I am looking for a backend or low-level role where that curiosity is useful.</p>
+        <div class="links">
+          <a href="#work">See the work</a>
+          <a href="https://github.com/Tim-kieboom">GitHub</a>
+        </div>
+      </div>
+
+      <div class="panel" aria-label="Example of sol-lang syntax and the state of its compiler pipeline">
+        <header>
+          <span class="label">sol-lang</span>
+          <span class="label">my compiler, in Rust</span>
+        </header>
+<pre><span class="c">// constant, immutable local, mutable local</span>
+<span class="t">answer</span> <span class="k">::</span> 42
+<span class="t">immut</span>  <span class="k">:=</span> 1
+<span class="k">mut</span> <span class="t">x</span>  <span class="k">:=</span> 2
+x = 3
+
+<span class="c">// add a method to a primitive type</span>
+<span class="t">int</span>.add(<span class="k">this</span>, a: <span class="t">int</span>)
+
+<span class="c">// propagate an error to the caller</span>
+value := parse().<span class="k">pass</span></pre>
+        <ol class="pipe" aria-label="Compiler pipeline">
+          <li><span>lexer</span></li>
+          <li><span>AST</span></li>
+          <li><span>typechecker</span></li>
+          <li><span>MIR</span></li>
+          <li><span>LLVM IR</span></li>
+          <li class="wip"><span>borrow checker</span></li>
+          <li class="plan"><span>generics</span></li>
+        </ol>
+        <div class="legend">
+          <span>works end to end (non-generic subset)</span>
+          <span class="w">in progress</span>
+          <span class="p">planned</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="work">
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <span class="label">Four projects, all public</span>
+    </div>
+
+    <div class="feature">
+      <div>
+        <p class="label">Compiler · Rust · LLVM</p>
+        <h3><em>sol</em>-lang</h3>
+        <p class="why">A systems language that keeps Rust's borrow checker and drops much of the boilerplate, with a syntax influenced by Kotlin and Swift.</p>
+        <p class="note"><b>Where it stands:</b> pre-alpha. The pipeline runs from source to LLVM IR for a non-generic subset of the language. Borrow checking is in progress and generics and union types are still to come. Real programs do not compile yet.</p>
+        <div class="links">
+          <a href="https://github.com/Tim-kieboom/sol_frontend">Read the source</a>
+        </div>
+      </div>
+      <dl class="dl">
+        <div><dt>Ownership</dt><dd>Values move by default and the compiler checks borrows at compile time.</dd></div>
+        <div><dt>Bindings</dt><dd><code>::</code> for constants, <code>:=</code> for immutable locals and <code>mut</code> for mutable ones, so a name tells you how it can change.</dd></div>
+        <div><dt>Methods</dt><dd>Any type can be extended with methods, primitives included.</dd></div>
+        <div><dt>Types</dt><dd>Aliases, nominal wrappers and range-limited types, with union types and match chains planned.</dd></div>
+        <div><dt>Concurrency</dt><dd>A built-in async/await runtime built around structured concurrency.</dd></div>
+      </dl>
+    </div>
+
+    <div class="rows">
+      <article class="row">
+        <h3>sol-shell</h3>
+        <div class="what">
+          <p>A status bar, wallpaper and notification daemon for Hyprland, written in QML on Quickshell. <b>Singleton services own the system state</b> (audio, Bluetooth, network, CPU and memory) and the UI only displays it. It includes a theme system that exports colors to Wofi, Dolphin, Thunar and Zen, and ships with a NixOS module.</p>
+        </div>
+        <div class="meta">
+          <ul class="tags"><li>QML</li><li>Quickshell</li><li>Nix</li></ul>
+          <a class="go" href="https://github.com/Tim-kieboom/sol-shell">Source</a>
+        </div>
+      </article>
+
+      <article class="row">
+        <h3>TerminalCode</h3>
+        <div class="what">
+          <p>A keyboard-driven code editor that runs in the terminal, written in Rust with Ratatui. <b>Keybindings and themes are plain JSON files</b>, so the editor can be reshaped without recompiling.</p>
+        </div>
+        <div class="meta">
+          <ul class="tags"><li>Rust</li><li>Ratatui</li><li>TUI</li></ul>
+          <a class="go" href="https://github.com/Tim-kieboom/TerminalCode">Source</a>
+        </div>
+      </article>
+
+      <article class="row">
+        <h3>arduinoOS</h3>
+        <div class="what">
+          <p>A small operating system in C++ that I wrote for school. It is built with PlatformIO on top of a library of my own, <b>TKardunio</b>, and is where I first worked directly against hardware limits.</p>
+        </div>
+        <div class="meta">
+          <ul class="tags"><li>C++</li><li>PlatformIO</li><li>Embedded</li></ul>
+          <a class="go" href="https://github.com/Tim-kieboom/arduinoOS">Source</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sec-head">
+      <h2>About</h2>
+      <span class="label">NixOS · Hyprland</span>
+    </div>
+    <div class="about">
+      <div>
+        <p>I like understanding how things work underneath. That is why I build compilers and operating systems for fun, and why I run NixOS with Hyprland on my own machine and keep adjusting it. sol-shell grew out of that habit.</p>
+        <p>Most of my low-level work is in Rust and C++. I am looking for a backend or systems role, and I am open to which direction that takes while I learn what suits me best.</p>
+        <ul class="stack" aria-label="Tools">
+          <li>Rust</li><li>C++</li><li>LLVM</li><li>QML</li><li>Nix</li><li>Linux</li><li>Hyprland</li>
+        </ul>
+      </div>
+      <div class="exp">
+        <p class="label">Internship</p>
+        <h3>CityGIS</h3>
+        <p>I did my internship at CityGIS, a company that builds geospatial software. The product is proprietary, so there is no public code to show. I am happy to talk about the work and what I learned in a conversation.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Want to talk about a role?</h2>
+    <div class="links">
+      <a href="https://github.com/Tim-kieboom">github.com/Tim-kieboom</a>
+    </div>
+    <p class="small">Built with plain HTML, SCSS and TypeScript.</p>
+  </footer>
+</div>
+</body>
+</html>

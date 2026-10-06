@@ -1,0 +1,137 @@
+@use "mixins" as *;
+
+// Featured project: sol-lang -------------------------------------------------
+
+.feature {
+  @include split(1fr, 1.1fr);
+
+  h3 {
+    @include fluid-heading(2rem, 5vw, 3rem);
+    margin-top: 12px;
+
+    em {
+      font-style: normal;
+      color: var(--accent);
+    }
+  }
+
+  .why {
+    margin-top: 18px;
+    font-size: 1.1rem;
+  }
+
+  .note {
+    margin-top: 18px;
+    color: var(--muted);
+
+    b {
+      color: var(--ink);
+      font-weight: 500;
+    }
+  }
+}
+
+// Definition list of language features.
+.dl {
+  display: grid;
+  margin: 0;
+
+  > div {
+    display: grid;
+    grid-template-columns: 9.5rem minmax(0, 1fr);
+    gap: 20px;
+    padding-block: 18px;
+    border-top: 1px solid var(--line);
+
+    &:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    @include below(tablet) {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 4px;
+    }
+  }
+
+  dt {
+    @include mono(0.82rem);
+    color: var(--accent);
+    padding-top: 3px;
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  code {
+    font-size: 0.86em;
+    background: var(--highlight);
+    color: var(--accent);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+}
+
+// Other projects -------------------------------------------------------------
+
+.rows {
+  margin-top: 64px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr) 14rem;
+  gap: 32px;
+  align-items: start;
+  padding-block: 28px;
+  border-top: 1px solid var(--line);
+
+  &:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  @include below(tablet) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  h3 {
+    font-size: 1.45rem;
+    font-weight: 700;
+  }
+
+  .what {
+    color: var(--muted);
+
+    b {
+      color: var(--ink);
+      font-weight: 500;
+    }
+  }
+
+  .meta {
+    min-width: 0;
+  }
+
+  .go {
+    @include mono(0.85rem);
+    @include accent-link;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+
+  li {
+    @include mono(0.74rem);
+    border: 1px solid var(--line);
+    padding: 2px 8px;
+    border-radius: 3px;
+    color: var(--muted);
+  }
+}

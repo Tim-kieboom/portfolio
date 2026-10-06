@@ -1,0 +1,29 @@
+[
+  {
+    "label": "build",
+    "command": "nix-shell --run 'npm install --silent && npm run build'",
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "serve (http://localhost:8000)",
+    "command": "nix-shell -p python3 --run 'python3 -m http.server 8000'",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "build and serve",
+    "command": "nix-shell --run 'npm install --silent && npm run build' && nix-shell -p python3 --run 'python3 -m http.server 8000'",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "watch (css + ts)",
+    "command": "nix-shell --run 'npm run watch:css & npm run watch:js; wait'",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  }
+]

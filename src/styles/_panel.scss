@@ -1,0 +1,113 @@
+// The sol-lang code panel and its compiler pipeline.
+
+// Status dot shared by the pipeline steps and the legend.
+// Modifiers: `done` (default), `wip` (half filled), `plan` (hollow).
+@mixin dot($state: done) {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+
+  @if $state == done {
+    background: var(--ok);
+  } @else if $state == wip {
+    background: conic-gradient(var(--accent) 0 50%, transparent 50% 100%);
+    border: 1px solid var(--accent);
+  } @else if $state == plan {
+    background: transparent;
+    border: 1px solid var(--placeholder);
+  }
+}
+
+.panel {
+  background: var(--code-bg);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  min-width: 0;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  pre {
+    margin: 0;
+    padding: 18px 16px;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.86rem;
+    line-height: 1.75;
+    color: var(--code-fg);
+  }
+}
+
+// Syntax highlighting: comment, keyword/operator, type/name.
+.c { color: var(--code-comment); }
+.k { color: var(--code-key); }
+.t { color: var(--code-type); }
+
+.pipe {
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 6px;
+  border-top: 1px solid var(--line);
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+
+    &:not(:last-child)::after {
+      content: "→";
+      color: var(--muted);
+    }
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      padding: 4px 9px;
+      border-radius: 3px;
+
+      &::before { @include dot(done); }
+    }
+
+    &.wip span::before { @include dot(wip); }
+
+    &.plan span {
+      border-style: dashed;
+      color: var(--muted);
+
+      &::before { @include dot(plan); }
+    }
+  }
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  padding: 0 16px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+
+  span::before {
+    @include dot(done);
+    margin-right: 6px;
+  }
+
+  .w::before { @include dot(wip); }
+  .p::before { @include dot(plan); }
+}

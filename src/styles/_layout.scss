@@ -20,6 +20,24 @@
     }
   }
 
+  // Language switch (EN / NL).
+  .lang {
+    display: flex;
+    gap: 4px;
+    @include mono(0.85rem);
+
+    a {
+      text-decoration: none;
+      color: var(--muted);
+      padding: 8px 6px;
+
+      &:hover,
+      &[aria-current="true"] {
+        color: var(--accent-hover);
+      }
+    }
+  }
+
   nav {
     display: flex;
     gap: 22px;
@@ -32,6 +50,7 @@
     a {
       text-decoration: none;
       color: var(--muted);
+      padding-block: 8px; // larger tap target on phones
 
       &:hover,
       &[aria-current="true"] {

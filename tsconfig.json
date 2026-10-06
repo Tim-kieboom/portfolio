@@ -4,6 +4,7 @@
     "module": "ES2020",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "strict": true,
+    "types": [],
     "noUncheckedIndexedAccess": true,
     "rootDir": "src/scripts",
     "outDir": "dist"

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Tim Kieboom</title>
+<meta name="description" content="Tim Kieboom, backend- en systeemontwikkelaar. Een compiler, een desktopshell, een terminaleditor en een klein besturingssysteem, plus een teamproject van school en een stage bij CityGIS.">
+<link rel="canonical" href="https://tim-kieboom.github.io/portfolio/nl/">
+<link rel="alternate" hreflang="nl" href="https://tim-kieboom.github.io/portfolio/nl/">
+<link rel="alternate" hreflang="en" href="https://tim-kieboom.github.io/portfolio/">
+<link rel="alternate" hreflang="x-default" href="https://tim-kieboom.github.io/portfolio/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%2311111b%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27monospace%27 font-size=%2716%27 font-weight=%27bold%27 text-anchor=%27middle%27 fill=%27%23d1c88f%27%3Etk%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tim Kieboom">
+<meta property="og:description" content="Backend- en systeemontwikkelaar die graag dicht op de machine werkt.">
+<meta property="og:url" content="https://tim-kieboom.github.io/portfolio/nl/">
+<meta property="og:locale" content="nl_NL">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../dist/main.css">
+<script type="module" src="../dist/main.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar">
+    <a class="mark" href="#top">tim<b>@</b>kieboom</a>
+    <nav aria-label="Secties">
+      <a href="#verify">controleer</a>
+      <a href="#work">werk</a>
+      <a href="#about">over mij</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Taal">
+        <a href="../" lang="en" hreflang="en" title="English">EN</a>
+        <a href="./" lang="nl" hreflang="nl" aria-current="true">NL</a>
+    </div>
+  </div>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <p class="status label"><i aria-hidden="true"></i> Beschikbaar voor werk</p>
+        <h1>Tim Kieboom</h1>
+        <p class="lead">Backend- en systeemontwikkelaar die graag dicht op de machine werkt.</p>
+        <p class="sub">In mijn vrije tijd schrijf ik een compiler, een desktopshell, een terminaleditor en een klein besturingssysteem. Ik zoek een backend- of low-level functie waarin die nieuwsgierigheid van pas komt.</p>
+        <div class="links">
+          <a href="#work">Bekijk mijn werk</a>
+          <a href="https://github.com/Tim-kieboom">GitHub</a>
+        </div>
+      </div>
+      <div class="verify" id="verify" role="region" aria-labelledby="verify-title">
+        <h2 id="verify-title" class="label">Controleer het zelf</h2>
+        <ol>
+          <li>
+            <p class="label">Opgeleverd</p>
+            <h3>sol-shell</h3>
+            <p>Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland die ik op mijn eigen computer gebruik. De eerste release is nog in de maak: installatiedocumentatie en een test op een schone machine ontbreken nog.</p>
+            <p class="state wip">Release in uitvoering</p>
+            <a class="go" href="https://github.com/Tim-kieboom/sol-shell">Broncode</a>
+          </li>
+          <li>
+            <p class="label">Samenwerken</p>
+            <h3>DSI-logboek</h3>
+            <p>Een webapp-prototype voor school, gebouwd door een team van drie ontwikkelaars, met pagina's voor leerlingen en ouders. Ik deed 46 commits, waaronder het databasewerk, in een repository met ongeveer 30 pull requests die binnen het team zijn samengevoegd.</p>
+            <p class="state">Code privé, ik loop er graag doorheen</p>
+          </li>
+          <li>
+            <p class="label">Werkervaring</p>
+            <h3>Stage bij CityGIS</h3>
+            <p>Een stage bij een bedrijf dat geo-software maakt. Ik schreef Kotlin, Rust en Python voor hun systemen in een privé-repository. De code is bedrijfseigendom, dus ik beschrijf het werk in plaats van ernaar te linken.</p>
+            <p class="state">Code privé, referenties op aanvraag</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </main>
+
+  <section id="work">
+    <div class="sec-head">
+      <h2>Geselecteerd werk</h2>
+      <span class="label">Openbare projecten</span>
+    </div>
+
+    <div class="feature">
+      <div>
+        <p class="label">Compiler · Rust · LLVM</p>
+        <h3><em>sol</em>-lang</h3>
+        <p class="why">Een systeemtaal die de borrow checker van Rust behoudt en veel van de overbodige code weglaat, met een syntax beïnvloed door Kotlin en Swift.</p>
+        <p class="note"><b>Huidige stand:</b> pre-alpha. De pipeline werkt van broncode tot LLVM IR voor een niet-generieke subset van de taal. De borrow checker is in aanbouw en generics en union types moeten nog komen. Echte programma's compileren nog niet.</p>
+        <div class="links">
+          <a href="https://github.com/Tim-kieboom/sol_frontend">Lees de broncode</a>
+        </div>
+      </div>
+      <dl class="dl">
+        <div><dt>Eigenaarschap</dt><dd>Waarden worden standaard verplaatst en de compiler controleert leningen bij het compileren.</dd></div>
+        <div><dt>Bindingen</dt><dd><code>::</code> voor constanten, <code>:=</code> voor onveranderlijke lokale variabelen en <code>mut</code> voor veranderlijke, zodat de naam je vertelt hoe hij kan veranderen.</dd></div>
+        <div><dt>Methoden</dt><dd>Elk type kan met methoden worden uitgebreid, ook primitieve types.</dd></div>
+        <div><dt>Types</dt><dd>Aliassen, nominale wrappers en types met een beperkt bereik, met union types en match-ketens gepland.</dd></div>
+        <div><dt>Gelijktijdigheid</dt><dd>Een ingebouwde async/await-runtime rond gestructureerde gelijktijdigheid.</dd></div>
+      </dl>
+    </div>
+
+    <div class="panel panel--lang" aria-label="Voorbeeld van sol-lang-syntax en de stand van de compilerpipeline">
+      <header>
+        <span class="label">sol-lang</span>
+        <span class="label">mijn compiler, in Rust</span>
+      </header>
+<pre><span class="c">// constante, onveranderlijke lokale, veranderlijke lokale</span>
+<span class="t">answer</span> <span class="k">::</span> 42
+<span class="t">immut</span>  <span class="k">:=</span> 1
+<span class="k">mut</span> <span class="t">x</span>  <span class="k">:=</span> 2
+x = 3
+
+<span class="c">// voeg een methode toe aan een primitief type</span>
+<span class="t">int</span>.add(<span class="k">this</span>, a: <span class="t">int</span>)
+
+<span class="c">// geef een fout door aan de aanroeper</span>
+value := parse().<span class="k">pass</span></pre>
+      <ol class="pipe" aria-label="Compilerpipeline">
+          <li><span>lexer</span></li>
+          <li><span>AST</span></li>
+          <li><span>typechecker</span></li>
+          <li><span>MIR</span></li>
+          <li><span>LLVM IR</span></li>
+          <li class="wip"><span>borrow checker</span></li>
+          <li class="plan"><span>generics</span></li>
+      </ol>
+      <div class="legend">
+        <span>werkt end to end (niet-generieke subset)</span>
+        <span class="w">in aanbouw</span>
+        <span class="p">gepland</span>
+      </div>
+    </div>
+
+    <div class="rows">
+      <article class="row">
+        <h3>sol-shell</h3>
+        <div class="what">
+          <p>Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland, geschreven in QML op Quickshell. <b>Singleton-services beheren de systeemstatus</b> (audio, Bluetooth, netwerk, CPU en geheugen) en de UI toont die alleen. Met een themasysteem dat kleuren exporteert naar Wofi, Dolphin, Thunar en Zen, en een NixOS-module.</p>
+        </div>
+        <div class="meta">
+          <ul class="tags"><li>QML</li><li>Quickshell</li><li>Nix</li></ul>
+          <a class="go" href="https://github.com/Tim-kieboom/sol-shell">Broncode</a>
+        </div>
+      </article>
+
+      <article class="row">
+        <h3>TerminalCode</h3>
+        <div class="what">
+          <p>Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. <b>Sneltoetsen en thema's zijn gewone JSON-bestanden</b>, dus de editor is aan te passen zonder opnieuw te compileren.</p>
+        </div>
+        <div class="meta">
+          <ul class="tags"><li>Rust</li><li>Ratatui</li><li>TUI</li></ul>
+          <a class="go" href="https://github.com/Tim-kieboom/TerminalCode">Broncode</a>
+        </div>
+      </article>
+
+      <article class="row">
+        <h3>arduinoOS</h3>
+        <div class="what">
+          <p>Een klein besturingssysteem in C++ dat ik voor school schreef. Het is gebouwd met PlatformIO bovenop een eigen bibliotheek, <b>TKardunio</b>, en is waar ik voor het eerst direct tegen hardwarebeperkingen aanliep.</p>
+        </div>
+        <div class="meta">
+          <ul class="tags"><li>C++</li><li>PlatformIO</li><li>Embedded</li></ul>
+          <a class="go" href="https://github.com/Tim-kieboom/arduinoOS">Broncode</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sec-head">
+      <h2>Over mij</h2>
+      <span class="label">NixOS · Hyprland</span>
+    </div>
+    <div class="about">
+      <div>
+        <p>Ik wil begrijpen hoe dingen eronder werken. Daarom bouw ik voor de lol compilers en besturingssystemen, en draai ik NixOS met Hyprland op mijn eigen computer die ik steeds blijf bijstellen. sol-shell is uit die gewoonte ontstaan.</p>
+        <p>Het meeste van mijn low-level werk is in Rust en C++. Ik zoek een backend- of systeemfunctie en sta open voor de richting, terwijl ik ontdek wat het best bij me past.</p>
+        <ul class="stack" aria-label="Gereedschap"><li>Rust</li><li>C++</li><li>LLVM</li><li>QML</li><li>Nix</li><li>Linux</li><li>Hyprland</li></ul>
+      </div>
+      <div class="exp">
+        <p class="label">Stage</p>
+        <h3>CityGIS</h3>
+        <p>Ik liep mijn stage bij CityGIS, een bedrijf dat geo-software maakt. Het product is bedrijfseigendom, dus er is geen openbare code om te laten zien. Ik vertel graag in een gesprek over het werk en wat ik ervan heb geleerd.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Praten over een functie?</h2>
+    <div class="links">
+      <a href="https://github.com/Tim-kieboom">github.com/Tim-kieboom</a>
+    </div>
+    <p class="small">Referenties op aanvraag. Gebouwd met gewone HTML, SCSS en TypeScript.</p>
+  </footer>
+</div>
+</body>
+</html>

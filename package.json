@@ -4,13 +4,16 @@
   "scripts": {
     "build:css": "sass --no-source-map --style=compressed src/styles/main.scss dist/main.css",
     "build:js": "tsc",
-    "build": "npm run build:css && npm run build:js",
+    "build": "npm run build:css && npm run build:js && npm run build:pages",
     "watch:css": "sass --watch src/styles/main.scss dist/main.css",
     "watch:js": "tsc --watch",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.build.json --noEmit",
+    "build:pages": "tsc -p tsconfig.build.json && node .build/build/build.js"
   },
   "devDependencies": {
+    "@types/node": "^26.6.4",
     "sass": "^1.80.0",
     "typescript": "^5.6.0"
-  }
+  },
+  "type": "module"
 }

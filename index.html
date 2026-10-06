@@ -7,18 +7,21 @@
 <title>Tim Kieboom</title>
 <meta name="description" content="Tim Kieboom, backend and systems developer. A compiler, a desktop shell, a terminal editor and a small operating system, plus a school team project and a CityGIS internship.">
 <link rel="canonical" href="https://tim-kieboom.github.io/portfolio/">
+<link rel="alternate" hreflang="en" href="https://tim-kieboom.github.io/portfolio/">
+<link rel="alternate" hreflang="nl" href="https://tim-kieboom.github.io/portfolio/nl/">
+<link rel="alternate" hreflang="x-default" href="https://tim-kieboom.github.io/portfolio/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%2311111b%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27monospace%27 font-size=%2716%27 font-weight=%27bold%27 text-anchor=%27middle%27 fill=%27%23d1c88f%27%3Etk%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tim Kieboom">
 <meta property="og:description" content="Backend and systems developer who likes working close to the machine.">
 <meta property="og:url" content="https://tim-kieboom.github.io/portfolio/">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="dist/main.css">
 <script type="module" src="dist/main.js" defer></script>
-
 </head>
 <body>
 <div class="wrap">
@@ -30,6 +33,10 @@
       <a href="#about">about</a>
       <a href="#contact">contact</a>
     </nav>
+    <div class="lang" role="group" aria-label="Language">
+        <a href="./" lang="en" hreflang="en" aria-current="true">EN</a>
+        <a href="nl/" lang="nl" hreflang="nl" title="Nederlands">NL</a>
+    </div>
   </div>
 
   <main id="top">
@@ -68,7 +75,6 @@
           </li>
         </ol>
       </div>
-
     </div>
   </main>
 
@@ -97,23 +103,23 @@
       </dl>
     </div>
 
-      <div class="panel panel--lang" aria-label="Example of sol-lang syntax and the state of its compiler pipeline">
-        <header>
-          <span class="label">sol-lang</span>
-          <span class="label">my compiler, in Rust</span>
-        </header>
-  <pre><span class="c">// constant, immutable local, mutable local</span>
-  <span class="t">answer</span> <span class="k">::</span> 42
-  <span class="t">immut</span>  <span class="k">:=</span> 1
-  <span class="k">mut</span> <span class="t">x</span>  <span class="k">:=</span> 2
-  x = 3
-  
-  <span class="c">// add a method to a primitive type</span>
-  <span class="t">int</span>.add(<span class="k">this</span>, a: <span class="t">int</span>)
-  
-  <span class="c">// propagate an error to the caller</span>
-  value := parse().<span class="k">pass</span></pre>
-        <ol class="pipe" aria-label="Compiler pipeline">
+    <div class="panel panel--lang" aria-label="Example of sol-lang syntax and the state of its compiler pipeline">
+      <header>
+        <span class="label">sol-lang</span>
+        <span class="label">my compiler, in Rust</span>
+      </header>
+<pre><span class="c">// constant, immutable local, mutable local</span>
+<span class="t">answer</span> <span class="k">::</span> 42
+<span class="t">immut</span>  <span class="k">:=</span> 1
+<span class="k">mut</span> <span class="t">x</span>  <span class="k">:=</span> 2
+x = 3
+
+<span class="c">// add a method to a primitive type</span>
+<span class="t">int</span>.add(<span class="k">this</span>, a: <span class="t">int</span>)
+
+<span class="c">// propagate an error to the caller</span>
+value := parse().<span class="k">pass</span></pre>
+      <ol class="pipe" aria-label="Compiler pipeline">
           <li><span>lexer</span></li>
           <li><span>AST</span></li>
           <li><span>typechecker</span></li>
@@ -121,13 +127,14 @@
           <li><span>LLVM IR</span></li>
           <li class="wip"><span>borrow checker</span></li>
           <li class="plan"><span>generics</span></li>
-        </ol>
-        <div class="legend">
-          <span>works end to end (non-generic subset)</span>
-          <span class="w">in progress</span>
-          <span class="p">planned</span>
-        </div>
+      </ol>
+      <div class="legend">
+        <span>works end to end (non-generic subset)</span>
+        <span class="w">in progress</span>
+        <span class="p">planned</span>
       </div>
+    </div>
+
     <div class="rows">
       <article class="row">
         <h3>sol-shell</h3>
@@ -173,9 +180,7 @@
       <div>
         <p>I like understanding how things work underneath. That is why I build compilers and operating systems for fun, and why I run NixOS with Hyprland on my own machine and keep adjusting it. sol-shell grew out of that habit.</p>
         <p>Most of my low-level work is in Rust and C++. I am looking for a backend or systems role, and I am open to which direction that takes while I learn what suits me best.</p>
-        <ul class="stack" aria-label="Tools">
-          <li>Rust</li><li>C++</li><li>LLVM</li><li>QML</li><li>Nix</li><li>Linux</li><li>Hyprland</li>
-        </ul>
+        <ul class="stack" aria-label="Tools"><li>Rust</li><li>C++</li><li>LLVM</li><li>QML</li><li>Nix</li><li>Linux</li><li>Hyprland</li></ul>
       </div>
       <div class="exp">
         <p class="label">Internship</p>

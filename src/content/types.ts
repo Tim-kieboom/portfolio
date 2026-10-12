@@ -18,6 +18,7 @@ export interface Content {
 
   verify: {
     title: string;
+    terminal: VerifyItem;
     shipped: VerifyItem;
     team: VerifyItem;
     experience: VerifyItem;

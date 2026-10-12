@@ -28,10 +28,17 @@ export const en: Content = {
 
   verify: {
     title: "Check it for yourself",
-    shipped: {
+    terminal: {
       label: "Shipped",
       title: "TerminalCode",
       text: "A keyboard-driven code editor that runs in the terminal, written in Rust with Ratatui. Version 0.1.0 is released, and keybindings and themes are plain JSON files, so you can reshape it without recompiling.",
+      state: "Released, v0.1.0",
+      source: "Release notes",
+    },
+    shipped: {
+      label: "Shipped",
+      title: "sol-shell",
+      text: "A status bar, wallpaper and notification daemon for Hyprland that I run on my own machine. Version 0.1.0 is released: it installs on NixOS from a flake, and a VM test boots a fresh user and checks that the shell starts and stays up.",
       state: "Released, v0.1.0",
       source: "Release notes",
     },

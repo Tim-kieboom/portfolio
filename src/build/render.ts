@@ -103,7 +103,7 @@ function hero(c: Content): string {
       <div class="verify" id="verify" role="region" aria-labelledby="verify-title">
         <h2 id="verify-title" class="label">${verify.title}</h2>
         <ol>
-${verifyItem(verify.shipped, { done: true, url: "https://github.com/Tim-kieboom/sol-shell/releases/tag/v0.1.0" })}
+${verifyItem(verify.shipped, { done: true, url: "https://github.com/Tim-kieboom/TerminalCode/releases/tag/v0.1.0" })}
 ${verifyItem(verify.team)}
 ${verifyItem(verify.experience)}
         </ol>

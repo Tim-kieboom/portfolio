@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
 <title>Tim Kieboom</title>
-<meta name="description" content="Tim Kieboom, backend and systems developer. A compiler, a desktop shell, a terminal editor and a small operating system, plus a school team project and a CityGIS internship.">
+<meta name="description" content="Tim Kieboom, backend and systems developer. A compiler, a terminal editor, a desktop shell and a small operating system, plus a school team project and a CityGIS internship.">
 <link rel="canonical" href="https://tim-kieboom.github.io/portfolio/">
 <link rel="alternate" hreflang="en" href="https://tim-kieboom.github.io/portfolio/">
 <link rel="alternate" hreflang="nl" href="https://tim-kieboom.github.io/portfolio/nl/">
@@ -45,7 +45,7 @@
         <p class="status label"><i aria-hidden="true"></i> Open to work</p>
         <h1>Tim Kieboom</h1>
         <p class="lead">Backend and systems developer who likes working close to the machine.</p>
-        <p class="sub">I write a compiler, a desktop shell, a terminal editor and a small operating system in my spare time, and I am looking for a backend or low-level role where that curiosity is useful.</p>
+        <p class="sub">I write a compiler, a terminal editor, a desktop shell and a small operating system in my spare time, and I am looking for a backend or low-level role where that curiosity is useful.</p>
         <div class="links">
           <a href="#work">See the work</a>
           <a href="https://github.com/Tim-kieboom">GitHub</a>
@@ -56,10 +56,10 @@
         <ol>
           <li>
             <p class="label">Shipped</p>
-            <h3>sol-shell</h3>
-            <p>A status bar, wallpaper and notification daemon for Hyprland that I run on my own machine. Version 0.1.0 is released: it installs on NixOS from a flake, and a VM test boots a fresh user and checks that the shell starts and stays up.</p>
+            <h3>TerminalCode</h3>
+            <p>A keyboard-driven code editor that runs in the terminal, written in Rust with Ratatui. Version 0.1.0 is released, and keybindings and themes are plain JSON files, so you can reshape it without recompiling.</p>
             <p class="state done">Released, v0.1.0</p>
-            <a class="go" href="https://github.com/Tim-kieboom/sol-shell/releases/tag/v0.1.0">Release notes</a>
+            <a class="go" href="https://github.com/Tim-kieboom/TerminalCode/releases/tag/v0.1.0">Release notes</a>
           </li>
           <li>
             <p class="label">Teamwork</p>
@@ -137,17 +137,6 @@ value := parse().<span class="k">pass</span></pre>
 
     <div class="rows">
       <article class="row">
-        <h3>sol-shell</h3>
-        <div class="what">
-          <p>A status bar, wallpaper and notification daemon for Hyprland, written in QML on Quickshell. <b>Singleton services own the system state</b> (audio, Bluetooth, network, CPU and memory) and the UI only displays it. It includes a theme system that exports colors to Wofi, Dolphin, Thunar and Zen, and ships with a NixOS module.</p>
-        </div>
-        <div class="meta">
-          <ul class="tags"><li>QML</li><li>Quickshell</li><li>Nix</li></ul>
-          <a class="go" href="https://github.com/Tim-kieboom/sol-shell">Source</a>
-        </div>
-      </article>
-
-      <article class="row">
         <h3>TerminalCode</h3>
         <div class="what">
           <p>A keyboard-driven code editor that runs in the terminal, written in Rust with Ratatui. <b>Keybindings and themes are plain JSON files</b>, so the editor can be reshaped without recompiling.</p>
@@ -155,6 +144,17 @@ value := parse().<span class="k">pass</span></pre>
         <div class="meta">
           <ul class="tags"><li>Rust</li><li>Ratatui</li><li>TUI</li></ul>
           <a class="go" href="https://github.com/Tim-kieboom/TerminalCode">Source</a>
+        </div>
+      </article>
+
+      <article class="row">
+        <h3>sol-shell</h3>
+        <div class="what">
+          <p>A status bar, wallpaper and notification daemon for Hyprland, written in QML on Quickshell. <b>Singleton services own the system state</b> (audio, Bluetooth, network, CPU and memory) and the UI only displays it. It includes a theme system that exports colors to Wofi, Dolphin, Thunar and Zen, and ships with a NixOS module.</p>
+        </div>
+        <div class="meta">
+          <ul class="tags"><li>QML</li><li>Quickshell</li><li>Nix</li></ul>
+          <a class="go" href="https://github.com/Tim-kieboom/sol-shell">Source</a>
         </div>
       </article>
 

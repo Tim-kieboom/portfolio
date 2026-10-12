@@ -6,7 +6,7 @@ export const en: Content = {
 
   meta: {
     description:
-      "Tim Kieboom, backend and systems developer. A compiler, a desktop shell, a terminal editor and a small operating system, plus a school team project and a CityGIS internship.",
+      "Tim Kieboom, backend and systems developer. A compiler, a terminal editor, a desktop shell and a small operating system, plus a school team project and a CityGIS internship.",
     ogDescription: "Backend and systems developer who likes working close to the machine.",
   },
 
@@ -22,7 +22,7 @@ export const en: Content = {
   hero: {
     status: "Open to work",
     lead: "Backend and systems developer who likes working close to the machine.",
-    sub: "I write a compiler, a desktop shell, a terminal editor and a small operating system in my spare time, and I am looking for a backend or low-level role where that curiosity is useful.",
+    sub: "I write a compiler, a terminal editor, a desktop shell and a small operating system in my spare time, and I am looking for a backend or low-level role where that curiosity is useful.",
     seeWork: "See the work",
   },
 
@@ -30,8 +30,8 @@ export const en: Content = {
     title: "Check it for yourself",
     shipped: {
       label: "Shipped",
-      title: "sol-shell",
-      text: "A status bar, wallpaper and notification daemon for Hyprland that I run on my own machine. Version 0.1.0 is released: it installs on NixOS from a flake, and a VM test boots a fresh user and checks that the shell starts and stays up.",
+      title: "TerminalCode",
+      text: "A keyboard-driven code editor that runs in the terminal, written in Rust with Ratatui. Version 0.1.0 is released, and keybindings and themes are plain JSON files, so you can reshape it without recompiling.",
       state: "Released, v0.1.0",
       source: "Release notes",
     },
@@ -85,16 +85,16 @@ export const en: Content = {
     },
     projects: [
       {
-        name: "sol-shell",
-        text: "A status bar, wallpaper and notification daemon for Hyprland, written in QML on Quickshell. <b>Singleton services own the system state</b> (audio, Bluetooth, network, CPU and memory) and the UI only displays it. It includes a theme system that exports colors to Wofi, Dolphin, Thunar and Zen, and ships with a NixOS module.",
-        tags: ["QML", "Quickshell", "Nix"],
-        url: "https://github.com/Tim-kieboom/sol-shell",
-      },
-      {
         name: "TerminalCode",
         text: "A keyboard-driven code editor that runs in the terminal, written in Rust with Ratatui. <b>Keybindings and themes are plain JSON files</b>, so the editor can be reshaped without recompiling.",
         tags: ["Rust", "Ratatui", "TUI"],
         url: "https://github.com/Tim-kieboom/TerminalCode",
+      },
+      {
+        name: "sol-shell",
+        text: "A status bar, wallpaper and notification daemon for Hyprland, written in QML on Quickshell. <b>Singleton services own the system state</b> (audio, Bluetooth, network, CPU and memory) and the UI only displays it. It includes a theme system that exports colors to Wofi, Dolphin, Thunar and Zen, and ships with a NixOS module.",
+        tags: ["QML", "Quickshell", "Nix"],
+        url: "https://github.com/Tim-kieboom/sol-shell",
       },
       {
         name: "arduinoOS",

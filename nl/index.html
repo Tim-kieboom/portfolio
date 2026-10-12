@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
 <title>Tim Kieboom</title>
-<meta name="description" content="Tim Kieboom, backend- en systeemontwikkelaar. Een compiler, een desktopshell, een terminaleditor en een klein besturingssysteem, plus een teamproject van school en een stage bij CityGIS.">
+<meta name="description" content="Tim Kieboom, backend- en systeemontwikkelaar. Een compiler, een terminaleditor, een desktopshell en een klein besturingssysteem, plus een teamproject van school en een stage bij CityGIS.">
 <link rel="canonical" href="https://tim-kieboom.github.io/portfolio/nl/">
 <link rel="alternate" hreflang="nl" href="https://tim-kieboom.github.io/portfolio/nl/">
 <link rel="alternate" hreflang="en" href="https://tim-kieboom.github.io/portfolio/">
@@ -45,7 +45,7 @@
         <p class="status label"><i aria-hidden="true"></i> Beschikbaar voor werk</p>
         <h1>Tim Kieboom</h1>
         <p class="lead">Backend- en systeemontwikkelaar die graag dicht op de machine werkt.</p>
-        <p class="sub">In mijn vrije tijd schrijf ik een compiler, een desktopshell, een terminaleditor en een klein besturingssysteem. Ik zoek een backend- of low-level functie waarin die nieuwsgierigheid van pas komt.</p>
+        <p class="sub">In mijn vrije tijd schrijf ik een compiler, een terminaleditor, een desktopshell en een klein besturingssysteem. Ik zoek een backend- of low-level functie waarin die nieuwsgierigheid van pas komt.</p>
         <div class="links">
           <a href="#work">Bekijk mijn werk</a>
           <a href="https://github.com/Tim-kieboom">GitHub</a>
@@ -56,10 +56,10 @@
         <ol>
           <li>
             <p class="label">Opgeleverd</p>
-            <h3>sol-shell</h3>
-            <p>Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland die ik op mijn eigen computer gebruik. Versie 0.1.0 is uitgebracht: te installeren op NixOS via een flake, en een VM-test start een verse gebruiker op en controleert of de shell opstart en blijft draaien.</p>
+            <h3>TerminalCode</h3>
+            <p>Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. Versie 0.1.0 is uitgebracht, en sneltoetsen en thema's zijn gewone JSON-bestanden, dus je past de editor aan zonder opnieuw te compileren.</p>
             <p class="state done">Uitgebracht, v0.1.0</p>
-            <a class="go" href="https://github.com/Tim-kieboom/sol-shell/releases/tag/v0.1.0">Release-notities</a>
+            <a class="go" href="https://github.com/Tim-kieboom/TerminalCode/releases/tag/v0.1.0">Release-notities</a>
           </li>
           <li>
             <p class="label">Samenwerken</p>
@@ -137,17 +137,6 @@ value := parse().<span class="k">pass</span></pre>
 
     <div class="rows">
       <article class="row">
-        <h3>sol-shell</h3>
-        <div class="what">
-          <p>Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland, geschreven in QML op Quickshell. <b>Singleton-services beheren de systeemstatus</b> (audio, Bluetooth, netwerk, CPU en geheugen) en de UI toont die alleen. Met een themasysteem dat kleuren exporteert naar Wofi, Dolphin, Thunar en Zen, en een NixOS-module.</p>
-        </div>
-        <div class="meta">
-          <ul class="tags"><li>QML</li><li>Quickshell</li><li>Nix</li></ul>
-          <a class="go" href="https://github.com/Tim-kieboom/sol-shell">Broncode</a>
-        </div>
-      </article>
-
-      <article class="row">
         <h3>TerminalCode</h3>
         <div class="what">
           <p>Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. <b>Sneltoetsen en thema's zijn gewone JSON-bestanden</b>, dus de editor is aan te passen zonder opnieuw te compileren.</p>
@@ -155,6 +144,17 @@ value := parse().<span class="k">pass</span></pre>
         <div class="meta">
           <ul class="tags"><li>Rust</li><li>Ratatui</li><li>TUI</li></ul>
           <a class="go" href="https://github.com/Tim-kieboom/TerminalCode">Broncode</a>
+        </div>
+      </article>
+
+      <article class="row">
+        <h3>sol-shell</h3>
+        <div class="what">
+          <p>Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland, geschreven in QML op Quickshell. <b>Singleton-services beheren de systeemstatus</b> (audio, Bluetooth, netwerk, CPU en geheugen) en de UI toont die alleen. Met een themasysteem dat kleuren exporteert naar Wofi, Dolphin, Thunar en Zen, en een NixOS-module.</p>
+        </div>
+        <div class="meta">
+          <ul class="tags"><li>QML</li><li>Quickshell</li><li>Nix</li></ul>
+          <a class="go" href="https://github.com/Tim-kieboom/sol-shell">Broncode</a>
         </div>
       </article>
 

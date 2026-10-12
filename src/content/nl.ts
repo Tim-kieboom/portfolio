@@ -6,7 +6,7 @@ export const nl: Content = {
 
   meta: {
     description:
-      "Tim Kieboom, backend- en systeemontwikkelaar. Een compiler, een desktopshell, een terminaleditor en een klein besturingssysteem, plus een teamproject van school en een stage bij CityGIS.",
+      "Tim Kieboom, backend- en systeemontwikkelaar. Een compiler, een terminaleditor, een desktopshell en een klein besturingssysteem, plus een teamproject van school en een stage bij CityGIS.",
     ogDescription: "Backend- en systeemontwikkelaar die graag dicht op de machine werkt.",
   },
 
@@ -22,7 +22,7 @@ export const nl: Content = {
   hero: {
     status: "Beschikbaar voor werk",
     lead: "Backend- en systeemontwikkelaar die graag dicht op de machine werkt.",
-    sub: "In mijn vrije tijd schrijf ik een compiler, een desktopshell, een terminaleditor en een klein besturingssysteem. Ik zoek een backend- of low-level functie waarin die nieuwsgierigheid van pas komt.",
+    sub: "In mijn vrije tijd schrijf ik een compiler, een terminaleditor, een desktopshell en een klein besturingssysteem. Ik zoek een backend- of low-level functie waarin die nieuwsgierigheid van pas komt.",
     seeWork: "Bekijk mijn werk",
   },
 
@@ -30,8 +30,8 @@ export const nl: Content = {
     title: "Controleer het zelf",
     shipped: {
       label: "Opgeleverd",
-      title: "sol-shell",
-      text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland die ik op mijn eigen computer gebruik. Versie 0.1.0 is uitgebracht: te installeren op NixOS via een flake, en een VM-test start een verse gebruiker op en controleert of de shell opstart en blijft draaien.",
+      title: "TerminalCode",
+      text: "Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. Versie 0.1.0 is uitgebracht, en sneltoetsen en thema's zijn gewone JSON-bestanden, dus je past de editor aan zonder opnieuw te compileren.",
       state: "Uitgebracht, v0.1.0",
       source: "Release-notities",
     },
@@ -85,16 +85,16 @@ export const nl: Content = {
     },
     projects: [
       {
-        name: "sol-shell",
-        text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland, geschreven in QML op Quickshell. <b>Singleton-services beheren de systeemstatus</b> (audio, Bluetooth, netwerk, CPU en geheugen) en de UI toont die alleen. Met een themasysteem dat kleuren exporteert naar Wofi, Dolphin, Thunar en Zen, en een NixOS-module.",
-        tags: ["QML", "Quickshell", "Nix"],
-        url: "https://github.com/Tim-kieboom/sol-shell",
-      },
-      {
         name: "TerminalCode",
         text: "Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. <b>Sneltoetsen en thema's zijn gewone JSON-bestanden</b>, dus de editor is aan te passen zonder opnieuw te compileren.",
         tags: ["Rust", "Ratatui", "TUI"],
         url: "https://github.com/Tim-kieboom/TerminalCode",
+      },
+      {
+        name: "sol-shell",
+        text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland, geschreven in QML op Quickshell. <b>Singleton-services beheren de systeemstatus</b> (audio, Bluetooth, netwerk, CPU en geheugen) en de UI toont die alleen. Met een themasysteem dat kleuren exporteert naar Wofi, Dolphin, Thunar en Zen, en een NixOS-module.",
+        tags: ["QML", "Quickshell", "Nix"],
+        url: "https://github.com/Tim-kieboom/sol-shell",
       },
       {
         name: "arduinoOS",

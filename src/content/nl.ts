@@ -31,15 +31,15 @@ export const nl: Content = {
     terminal: {
       label: "Opgeleverd",
       title: "TerminalCode",
-      text: "Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. Versie 0.1.0 is uitgebracht, en sneltoetsen en thema's zijn gewone JSON-bestanden, dus je past de editor aan zonder opnieuw te compileren.",
-      state: "Uitgebracht, v0.1.0",
-      source: "Release-notities",
+      text: "Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. Versie 0.4.0 heeft tabs, gesplitste vensters, een ingebouwde terminal, projectzoeken en 'ga naar definitie' via rust-analyzer. Instellingen, sneltoetsen en thema's zijn gewone bestanden die bij opslaan worden toegepast, en met één commando te draaien op Nix.",
+      state: "v0.4.0, builds voor Linux en Windows",
+      source: "Broncode",
     },
     shipped: {
       label: "Opgeleverd",
       title: "sol-shell",
-      text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland die ik op mijn eigen computer gebruik. Versie 0.1.0 is uitgebracht: te installeren op NixOS via een flake, en een VM-test start een verse gebruiker op en controleert of de shell opstart en blijft draaien.",
-      state: "Uitgebracht, v0.1.0",
+      text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland die ik op mijn eigen computer gebruik. Versie 0.3.0 is uitgebracht: balk, vergrendelscherm en een optioneel inlogscherm. Te installeren op NixOS via een flake, en VM-tests starten een verse gebruiker op en controleren of de shell opstart en blijft draaien.",
+      state: "Uitgebracht, v0.3.0",
       source: "Release-notities",
     },
     team: {
@@ -93,13 +93,13 @@ export const nl: Content = {
     projects: [
       {
         name: "TerminalCode",
-        text: "Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. <b>Sneltoetsen en thema's zijn gewone JSON-bestanden</b>, dus de editor is aan te passen zonder opnieuw te compileren.",
+        text: "Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. Met tabs, gesplitste vensters, een ingebouwde terminal, projectzoeken en 'ga naar definitie'. <b>Instellingen, sneltoetsen en thema's zijn gewone bestanden</b> die bij opslaan worden toegepast, zonder herstart.",
         tags: ["Rust", "Ratatui", "TUI"],
         url: "https://github.com/Tim-kieboom/TerminalCode",
       },
       {
         name: "sol-shell",
-        text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland, geschreven in QML op Quickshell. <b>Singleton-services beheren de systeemstatus</b> (audio, Bluetooth, netwerk, CPU en geheugen) en de UI toont die alleen. Met een themasysteem dat kleuren exporteert naar Wofi, Dolphin, Thunar en Zen, en een NixOS-module.",
+        text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland, geschreven in QML op Quickshell. <b>Singleton-services beheren de systeemstatus</b> (audio, Bluetooth, netwerk, CPU en geheugen) en de UI toont die alleen. Met een vergrendelscherm, een optioneel inlogscherm, een themasysteem dat kleuren exporteert naar Wofi, Dolphin, Thunar en Zen, en een NixOS-module.",
         tags: ["QML", "Quickshell", "Nix"],
         url: "https://github.com/Tim-kieboom/sol-shell",
       },

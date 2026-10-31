@@ -31,15 +31,15 @@ export const en: Content = {
     terminal: {
       label: "Shipped",
       title: "TerminalCode",
-      text: "A keyboard-driven code editor that runs in the terminal, written in Rust with Ratatui. Version 0.4.0 has tabs, splits, an integrated terminal, project search and go to definition through rust-analyzer. Settings, keybindings and themes are plain files applied on save, and it runs with one command on Nix.",
-      state: "v0.4.0, builds for Linux and Windows",
-      source: "Source",
+      text: "A keyboard-driven code editor that runs in the terminal, written in Rust with Ratatui. Version 0.10.1 has tabs, splits, an integrated terminal, project search, git status in the gutter and go to definition through rust-analyzer. Plugins run sandboxed as WebAssembly, settings, keybindings and themes are plain files applied on save, and it runs with one command on Nix.",
+      state: "Released, v0.10.1",
+      source: "Release notes",
     },
     shipped: {
       label: "Shipped",
       title: "sol-shell",
-      text: "A status bar, wallpaper and notification daemon for Hyprland that I run on my own machine. Version 0.3.0 is released: bar, lock screen and an optional login screen. It installs on NixOS from a flake, and VM tests boot a fresh user and check that the shell starts and stays up.",
-      state: "Released, v0.3.0",
+      text: "A status bar, wallpaper and notification daemon for Hyprland that I run on my own machine. Version 0.6.2 is released: bar, lock screen, an optional login screen and battery and power-mode items for laptops. It installs on NixOS from a flake, and VM tests boot a fresh user and check that the shell starts and stays up.",
+      state: "Released, v0.6.2",
       source: "Release notes",
     },
     team: {
@@ -93,13 +93,13 @@ export const en: Content = {
     projects: [
       {
         name: "TerminalCode",
-        text: "A keyboard-driven code editor that runs in the terminal, written in Rust with Ratatui. It has tabs, splits, an integrated terminal, project search and go to definition. <b>Settings, keybindings and themes are plain files</b> that apply when you save them, with no restart.",
+        text: "A keyboard-driven code editor that runs in the terminal, written in Rust with Ratatui. It has tabs, splits, an integrated terminal, project search, git status and go to definition, and <b>WebAssembly plugins that run sandboxed</b>. Settings, keybindings and themes are plain files that apply when you save them, with no restart.",
         tags: ["Rust", "Ratatui", "TUI"],
         url: "https://github.com/Tim-kieboom/TerminalCode",
       },
       {
         name: "sol-shell",
-        text: "A status bar, wallpaper and notification daemon for Hyprland, written in QML on Quickshell. <b>Singleton services own the system state</b> (audio, Bluetooth, network, CPU and memory) and the UI only displays it. It includes a lock screen, an optional login screen, a theme system that exports colors to Wofi, Dolphin, Thunar and Zen, and ships with a NixOS module.",
+        text: "A status bar, wallpaper and notification daemon for Hyprland, written in QML on Quickshell. <b>Singleton services own the system state</b> (audio, Bluetooth, network, CPU and memory) and the UI only displays it. It includes a lock screen, an optional login screen, battery and power-mode items, a weather setting, a theme system that exports colors to Wofi, Dolphin, Thunar and Zen, and ships with a NixOS module.",
         tags: ["QML", "Quickshell", "Nix"],
         url: "https://github.com/Tim-kieboom/sol-shell",
       },

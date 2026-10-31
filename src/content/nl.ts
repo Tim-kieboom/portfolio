@@ -31,15 +31,15 @@ export const nl: Content = {
     terminal: {
       label: "Opgeleverd",
       title: "TerminalCode",
-      text: "Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. Versie 0.4.0 heeft tabs, gesplitste vensters, een ingebouwde terminal, projectzoeken en 'ga naar definitie' via rust-analyzer. Instellingen, sneltoetsen en thema's zijn gewone bestanden die bij opslaan worden toegepast, en met één commando te draaien op Nix.",
-      state: "v0.4.0, builds voor Linux en Windows",
-      source: "Broncode",
+      text: "Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. Versie 0.10.1 heeft tabs, gesplitste vensters, een ingebouwde terminal, projectzoeken, git-status in de goot en 'ga naar definitie' via rust-analyzer. Plugins draaien afgeschermd als WebAssembly, instellingen, sneltoetsen en thema's zijn gewone bestanden die bij opslaan worden toegepast, en met één commando te draaien op Nix.",
+      state: "Uitgebracht, v0.10.1",
+      source: "Release-notities",
     },
     shipped: {
       label: "Opgeleverd",
       title: "sol-shell",
-      text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland die ik op mijn eigen computer gebruik. Versie 0.3.0 is uitgebracht: balk, vergrendelscherm en een optioneel inlogscherm. Te installeren op NixOS via een flake, en VM-tests starten een verse gebruiker op en controleren of de shell opstart en blijft draaien.",
-      state: "Uitgebracht, v0.3.0",
+      text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland die ik op mijn eigen computer gebruik. Versie 0.6.2 is uitgebracht: balk, vergrendelscherm, een optioneel inlogscherm en batterij- en energiemodus-onderdelen voor laptops. Te installeren op NixOS via een flake, en VM-tests starten een verse gebruiker op en controleren of de shell opstart en blijft draaien.",
+      state: "Uitgebracht, v0.6.2",
       source: "Release-notities",
     },
     team: {
@@ -93,13 +93,13 @@ export const nl: Content = {
     projects: [
       {
         name: "TerminalCode",
-        text: "Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. Met tabs, gesplitste vensters, een ingebouwde terminal, projectzoeken en 'ga naar definitie'. <b>Instellingen, sneltoetsen en thema's zijn gewone bestanden</b> die bij opslaan worden toegepast, zonder herstart.",
+        text: "Een toetsenbordgestuurde code-editor die in de terminal draait, geschreven in Rust met Ratatui. Met tabs, gesplitste vensters, een ingebouwde terminal, projectzoeken, git-status en 'ga naar definitie', en <b>afgeschermde WebAssembly-plugins</b>. Instellingen, sneltoetsen en thema's zijn gewone bestanden die bij opslaan worden toegepast, zonder herstart.",
         tags: ["Rust", "Ratatui", "TUI"],
         url: "https://github.com/Tim-kieboom/TerminalCode",
       },
       {
         name: "sol-shell",
-        text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland, geschreven in QML op Quickshell. <b>Singleton-services beheren de systeemstatus</b> (audio, Bluetooth, netwerk, CPU en geheugen) en de UI toont die alleen. Met een vergrendelscherm, een optioneel inlogscherm, een themasysteem dat kleuren exporteert naar Wofi, Dolphin, Thunar en Zen, en een NixOS-module.",
+        text: "Een statusbalk-, achtergrond- en notificatiedaemon voor Hyprland, geschreven in QML op Quickshell. <b>Singleton-services beheren de systeemstatus</b> (audio, Bluetooth, netwerk, CPU en geheugen) en de UI toont die alleen. Met een vergrendelscherm, een optioneel inlogscherm, batterij- en energiemodus-onderdelen, een weerinstelling, een themasysteem dat kleuren exporteert naar Wofi, Dolphin, Thunar en Zen, en een NixOS-module.",
         tags: ["QML", "Quickshell", "Nix"],
         url: "https://github.com/Tim-kieboom/sol-shell",
       },
